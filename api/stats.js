@@ -27,7 +27,9 @@ export default async function handler(request, response) {
   weekStart.setHours(0, 0, 0, 0);
 
   // Rentang total dimulai dari tanggal awal yang aman.
-  const totalStart = new Date("2020-01-01T00:00:00.000Z");
+  const totalStart = new Date(
+  Date.now() - 30 * 24 * 60 * 60 * 1000
+);
 
   function makeParams(since, until, by) {
     const params = new URLSearchParams({
