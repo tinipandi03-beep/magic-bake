@@ -30,4 +30,9 @@ const toggle=document.getElementById('menuToggle'),navlinks=document.getElementB
 
 const lightbox=document.getElementById('lightbox'),lightboxImg=document.getElementById('lightboxImg');document.querySelectorAll('.gallery button').forEach(b=>b.addEventListener('click',()=>{lightboxImg.src=b.dataset.img;lightbox.classList.add('open');document.body.classList.add('lock')}));function closeLightbox(){lightbox.classList.remove('open');document.body.classList.remove('lock');lightboxImg.src=''}document.getElementById('closeLightbox').addEventListener('click',closeLightbox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox()}});
 if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
-</script></body></html>
+</script>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body></html>
